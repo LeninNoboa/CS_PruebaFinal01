@@ -12,27 +12,28 @@ search_button = driver.find_element(by=By.CSS_SELECTOR, value="#search_mini_form
 search_button.click()
 
 articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol")
-
+#vehicle_cards = driver.find_elements(By.CSS_SELECTOR, "#featuredUsed > div.xl3")
 
 mongodb = MongoDriver()
 
 for card in articulo_cards:
     try:
+        print(card)
         title = card.find_element(By.CSS_SELECTOR, "div > strong").text
         price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price > span.special-price").text
         print(title)
         print(f"${price}")
 
-
-        #title = card.find_element(By.CSS_SELECTOR,"div > div > div > div.card-info.card-content > div.module.tittle").text
-        #price = card.find_element(By.CSS_SELECTOR, "div > div > div > div.card-info.card-content > strong").text
-
         artic_actual = {
-            "title": title,
-            "price": price
+            "consulta": articulo,
+            "resultado": {
+                "title": title,
+                 "price": price,
+            }
         }
 
-        mongodb.insert_record(record=artic_actual, username="LAVADORA")
+
+        #mongodb.insert_record(record=artic_actual, username="LAVADORA")
 
         print("++++++++++++++++++++++++++++++++")
     except Exception as e:
