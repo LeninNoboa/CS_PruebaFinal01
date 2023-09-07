@@ -27,6 +27,7 @@ for card in articulo_cards:
     try:
         title = card.find_element(By.CSS_SELECTOR, "div > strong").text
         #price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price > span.special-price").text
+        price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price").text
         print(title)
         print(f"${price}")
 
