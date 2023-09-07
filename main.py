@@ -11,28 +11,22 @@ search_box.send_keys(articulo)
 search_button = driver.find_element(by=By.CSS_SELECTOR, value="#search_mini_form > div.actions > button")
 search_button.click()
 
-#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol
-#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid
-#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
-#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
-#maincontent > div.columns > div.column.main
+
 #articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol")
-
-
-
-#articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column")
+#articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li")
 
 articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li")
 #vehicle_cards = driver.find_elements(By.CSS_SELECTOR, "#featuredUsed > div.xl3")
 
-#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
+
+
 
 mongodb = MongoDriver()
 
 for card in articulo_cards:
     try:
         title = card.find_element(By.CSS_SELECTOR, "div > strong").text
-        price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price > span.special-price").text
+        #price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price > span.special-price").text
         print(title)
         print(f"${price}")
 
@@ -44,13 +38,12 @@ for card in articulo_cards:
             }
         }
 
+        mongodb.insert_record(record=artic_actual, username="LICUADORA")
 
-        mongodb.insert_record(record=artic_actual, username="LAVADORA")
-
-        print("++++++++++++++++++++++++++++++++")
+        print("Correcto++++++++++++++++++++++++++++++++")
     except Exception as e:
         print(e)
-        print("++++++++++++++++++++++++++++++++")
+        print("Excepcion++++++++++++++++++++++++++++++++")
 
 
 driver.close()
