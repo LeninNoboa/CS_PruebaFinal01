@@ -34,7 +34,7 @@ class MongoDriver:
 if __name__ == "__main__":
     mi_base_de_datos = MongoDriver()
     mi_base_de_datos.insert_record(record={
-        "titulo": "lavadora",
+        "titulo": "licuadora",
         "detalles": {
             "matricula": "982JHG",
             "fechayhora": datetime.now(),
