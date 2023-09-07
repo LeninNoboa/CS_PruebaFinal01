@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from db import MongoDriver
 
-articulo = "lavadora"
+articulo = "licuadora"
 driver = webdriver.Chrome()
 driver.get("https://www.artefacta.com/")
 search_box = driver.find_element(by=By.CSS_SELECTOR, value="#search")
@@ -11,14 +11,26 @@ search_box.send_keys(articulo)
 search_button = driver.find_element(by=By.CSS_SELECTOR, value="#search_mini_form > div.actions > button")
 search_button.click()
 
-articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol")
+#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol
+#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid
+#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
+#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
+#maincontent > div.columns > div.column.main
+#articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol")
+
+
+
+#articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column")
+
+articulo_cards = driver.find_elements(By.CSS_SELECTOR, "#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li")
 #vehicle_cards = driver.find_elements(By.CSS_SELECTOR, "#featuredUsed > div.xl3")
+
+#maincontent > div.columns > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li:nth-child(1)
 
 mongodb = MongoDriver()
 
 for card in articulo_cards:
     try:
-        print(card)
         title = card.find_element(By.CSS_SELECTOR, "div > strong").text
         price = card.find_element(By.CSS_SELECTOR, "div > div.price-box.price-final_price > span.special-price").text
         print(title)
@@ -33,7 +45,7 @@ for card in articulo_cards:
         }
 
 
-        #mongodb.insert_record(record=artic_actual, username="LAVADORA")
+        mongodb.insert_record(record=artic_actual, username="LAVADORA")
 
         print("++++++++++++++++++++++++++++++++")
     except Exception as e:
