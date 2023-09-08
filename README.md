@@ -26,6 +26,14 @@ Se creo un servicio web usando Python + Flask o Django para acceder la base de d
 [https://excalidraw.com/#json=p5cTWI3Sqg6POs1tkj-6Y,WY-Ya_quRcGmzieXr_HpXA]
 
 
+# Descripción del Proyecto
+- Se inicio el proyecto seleccionando una web que dispnga d la informacion necesaria con el proposito deseado, en este caso artefacta.com, esta pagina tiene la informacion de electrodomesticos de linea blanca y electronicos.
+- Posterior a esto se selecciono dos tipos de eletrodomestico de la linea blanca, lavadoras y licuadoras
+- 
+
+
+
+
 
 
 
@@ -51,14 +59,3 @@ Se creo un servicio web usando Python + Flask o Django para acceder la base de d
 
 +[documentación](https://markdown.es/)
 
-- Parte 1
-- Consigue extraer datos de una fuente de datos online.
-- Por ejemplo:
-una API web meteorológica, un portal inmobiliario o de venta de artículos de segunda mano,
-extraer texto de pdfs o foros...
-Parte 2
-Almacenar esta información de forma estructurada en una base de datos en la nube, puede
-ser tipo MongoDB (Mongo Atlas) o una base de datos tipo SQL
-Parte 3
-Crear un servicio web (usando Python + Flask o Django) que acceda a esa base de datos y
-haga algo (puede ser simplemente un print) o algo más elaborado como un buscador web
