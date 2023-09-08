@@ -30,7 +30,7 @@ class MongoDriver:
         except Exception as e:
             print(e)
 
-
+"""
 if __name__ == "__main__":
     mi_base_de_datos = MongoDriver()
     mi_base_de_datos.insert_record(record={
@@ -47,5 +47,5 @@ if __name__ == "__main__":
         },
         "precio": 100,
         "kms": 450000}, username="rafa_con_variables_secretas")
-
+"""
 
