@@ -28,7 +28,8 @@ Se creo un servicio web usando Python + Flask o Django para acceder la base de d
 
 # Descripción del Proyecto
 - Se inicio el proyecto seleccionando una web que dispnga d la informacion necesaria con el proposito deseado, en este caso artefacta.com, esta pagina tiene la informacion de electrodomesticos de linea blanca y electronicos.
-- Posterior a esto se selecciono dos tipos de eletrodomestico de la linea blanca, lavadoras y licuadoras
+- Se selecciono dos tipos de eletrodomestico de la linea blanca, lavadoras y licuadoras, con el fin de realizar las pruebas respectivas 
+- En el sisguiente paso, se procedido a realizar 
 - 
 
 
