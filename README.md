@@ -29,8 +29,10 @@ Se creo un servicio web usando Python + Flask o Django para acceder la base de d
 # Descripción del Proyecto
 - Se inicio el proyecto seleccionando una web que dispnga d la informacion necesaria con el proposito deseado, en este caso artefacta.com, esta pagina tiene la informacion de electrodomesticos de linea blanca y electronicos.
 - Se selecciono dos tipos de eletrodomestico de la linea blanca, lavadoras y licuadoras, con el fin de realizar las pruebas respectivas 
-- En el sisguiente paso, se procedido a realizar 
-- 
+- En el siguiente paso, se procedio a generar los archivos necesarios que contienen el código relacionado con la extracción de datos, archivo requirements.txt, datos de conexion a la base de datos .env y los archivos .py que se requieran, todos estos generados en PYCHARM 
+- El resultado de la ejecucion se almacenara en:  Repositorio 1: contiene el código relacionado con la extracción de datos, requirimientos y enlace a base de datos, el repositorio 2: Una carpeta con el código relacionado con el servicio web para consultar la base de datos y mostrar algún resultado.
+
+
 
 
 
