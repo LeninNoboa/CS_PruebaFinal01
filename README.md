@@ -10,7 +10,7 @@
 
 # Actividades del Proyecto
 __Parte 1__
-Extraer datos de una fuente de datos online. API web de eletrodomesticos denominado artefacta 
+Extraer datos de una fuente de datos online. API web de eletrodomésticos denominado artefacta 
 [https://www.artefacta.com/]
 
 __Parte 2__
@@ -34,5 +34,5 @@ Se creo un servicio web usando Python + Flask o Django para acceder la base de d
 - El resultado de la ejecucion se almacenara en:  Repositorio 1: contiene el código relacionado con la extracción de datos, requirimientos y enlace a base de datos, el repositorio 2: Una carpeta con el código relacionado con el servicio web para consultar la base de datos y mostrar algún resultado.
 
 # Dificultades encontradas
-- Durante el desarrollo del proyecto se encontraron varias novedades sobre la extraccion y caraga de datos fruto de la falata de experiencia que se tiene em este tip de proyectos, todos estos fueron superados mediante la vizualización de los archivos de claes y busquedas en paginas web.
+- Durante el desarrollo del proyecto se encontraron varias novedades sobre la extracción y carga de datos fruto de la falta de experiencia que se tiene en este tipo de proyectos, todos estos fueron superados mediante la vizualización de los archivos de clases y busquedas en paginas web.
   
